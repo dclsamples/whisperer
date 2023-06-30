@@ -8,5 +8,6 @@ To run the development server:
 
 ```bash
 npm run dev
-
 ```
+
+![Screenshot 2023-06-30 at 2 58 29 PM](https://github.com/dclsamples/whisperer/assets/1455542/9c1e7fb9-372f-45aa-8bdd-3656ac8b8ba9)
