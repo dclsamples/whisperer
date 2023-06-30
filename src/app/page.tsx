@@ -42,7 +42,7 @@ export default function Home() {
 			const data = await response.json();
 			console.log(data);
 
-			setResponse(data.output.text);
+			setResponse("Transcription: " + data.output.text);
 		} catch (error) {
 			// Handle any errors
 			console.error("An error occurred while uploading the file", error);
@@ -53,13 +53,12 @@ export default function Home() {
 	};
 
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between px-24 py-5">
+		<main className="flex min-h-0 flex-col items-center justify-between px-24 py-5">
 			<h1 className="text-5xl font-sans">Whisperer</h1>
-
-			<div className="flex  h-[35rem] w-[40rem] flex-col items-center bg-gray-600 rounded-xl">
+			<p className="m-8">An audio transcriber. Please upload an .MP3 or .WAV file containing voice.</p>
+			<div className="flex  h-[20rem] w-[40rem] flex-col items-center bg-gray-600 rounded-xl">
 				<div className=" h-full flex flex-col gap-2 overflow-y-auto py-8 px-3 w-full">
 					<input type="file" accept=".wav, .mp3" onChange={handleFileChange} />
-
 					<div className="w-[90%] h-max border-2 break-words">{isLoading ? "Loading..." : response ? response : ""}</div>
 				</div>
 				<div className="relative  w-[80%] bottom-4 flex justify-center">
